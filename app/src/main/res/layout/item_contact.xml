@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvNameContact"
+        style="@style/contact_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@+id/ivAvatarContact"
+        app:layout_constraintTop_toTopOf="@+id/ivAvatarContact" />
+
+    <ImageView
+        android:id="@+id/ivAvatarContact"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/friends_1" />
+
+    <TextView
+        android:id="@+id/tvLastNameContact"
+        style="@style/contact_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="LastName"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNameContact"
+        app:layout_constraintStart_toEndOf="@+id/tvNameContact"
+        app:layout_constraintTop_toTopOf="@+id/tvNameContact" />
+
+    <TextView
+        android:id="@+id/tvSuffixContact"
+        style="@style/contact_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Suffix"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLastNameContact"
+        app:layout_constraintStart_toEndOf="@+id/tvLastNameContact"
+        app:layout_constraintTop_toTopOf="@+id/tvLastNameContact" />
+
+    <TextView
+        android:id="@+id/tvEmailContact"
+        style="@style/email_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="email"
+        app:layout_constraintStart_toStartOf="@+id/tvNameContact"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameContact" />
+</androidx.constraintlayout.widget.ConstraintLayout>
