@@ -2,4 +2,13 @@
     <string name="app_name">Module_2_Lesson_6_hw_3</string>
     <string name="title_contacts">Contacts Manager</string>
     <string name="button_home">Home</string>
+    <string name="button_edit">Edit</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">First Name:</string>
+    <string name="lastname">Last Name:</string>
+    <string name="suffix">Suffix:</string>
+    <string name="phone_number">Phone number:</string>
+    <string name="email">Email:</string>
+    <string name="button_delete">Delete</string>
 </resources>

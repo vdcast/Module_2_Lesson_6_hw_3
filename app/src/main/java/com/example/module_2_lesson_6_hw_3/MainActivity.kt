@@ -1,18 +1,18 @@
 package com.example.module_2_lesson_6_hw_3
 
 import android.graphics.BitmapFactory
-import android.graphics.LinearGradient
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_contact.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ContactsListCallback{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rvContactsList.adapter = ContactAdapter(this, getContacts())
+        rvContactsList.adapter = ContactAdapter(this, getContacts(), this)
         rvContactsList.layoutManager = LinearLayoutManager(this)
 
     }
@@ -31,5 +31,13 @@ class MainActivity : AppCompatActivity() {
         contacts.add(Contact(BitmapFactory.decodeResource(resources, R.drawable.friends_5), "Mykyta",
             "Kozak", "Scientist", "mykytakozak@mail.com", "+380932555841"))
         return  contacts
+    }
+
+    override fun onItemSelected(item: Contact) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.flDetails,DetailsFragment.newInstance(item))
+            .addToBackStack(null)
+            .commit()
     }
 }

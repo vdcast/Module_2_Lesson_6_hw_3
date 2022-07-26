@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRootContactItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="8dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:paddingBottom="8dp">
 
     <TextView
         android:id="@+id/tvNameContact"
@@ -32,7 +33,7 @@
         style="@style/contact_list_text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:text="LastName"
         app:layout_constraintBottom_toBottomOf="@+id/tvNameContact"
         app:layout_constraintStart_toEndOf="@+id/tvNameContact"
@@ -43,7 +44,7 @@
         style="@style/contact_list_text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:text="Suffix"
         app:layout_constraintBottom_toBottomOf="@+id/tvLastNameContact"
         app:layout_constraintStart_toEndOf="@+id/tvLastNameContact"
@@ -58,4 +59,16 @@
         android:text="email"
         app:layout_constraintStart_toStartOf="@+id/tvNameContact"
         app:layout_constraintTop_toBottomOf="@+id/tvNameContact" />
+
+    <Button
+        android:id="@+id/btEditContactsList"
+        android:layout_width="56dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bt_bg"
+        android:text="@string/button_edit"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAvatarContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivAvatarContact" />
 </androidx.constraintlayout.widget.ConstraintLayout>
