@@ -30,9 +30,6 @@ class DetailsFragment : Fragment() {
         ivAvatar.setImageBitmap(contact?.avatar)
 
         btEditDetails.setOnClickListener {
-
-
-
             if (activity != null){
                 requireActivity().supportFragmentManager
                     .beginTransaction()
@@ -40,7 +37,6 @@ class DetailsFragment : Fragment() {
                     .addToBackStack(null)
                     .commit()
             }
-
         }
 
     }
