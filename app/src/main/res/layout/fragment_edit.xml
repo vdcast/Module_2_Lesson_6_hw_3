@@ -35,7 +35,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivAvatarEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEditTitle" />
 
     <TextView
         android:id="@+id/textView2Edit"
@@ -77,15 +77,6 @@
         app:layout_constraintStart_toStartOf="@+id/textView4Edit"
         app:layout_constraintTop_toBottomOf="@+id/textView4Edit" />
 
-    <!--    <EditText-->
-<!--        android:id="@+id/editTextTextPersonName"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:text="Name"-->
-<!--        tools:layout_editor_absoluteX="95dp"-->
-<!--        tools:layout_editor_absoluteY="508dp" />-->
 
     <View
         android:id="@+id/viewToClickableEdit"
@@ -104,10 +95,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/textView1Edit"
         app:layout_constraintStart_toEndOf="@+id/textView1Edit"
         app:layout_constraintTop_toTopOf="@+id/textView1Edit" />
+
+
+<!--    android:inputType="textPersonName"-->
 
     <EditText
         android:id="@+id/etLastNameEdit"
@@ -170,7 +163,16 @@
         app:layout_constraintStart_toEndOf="@+id/viewToSplitScreenEdit"
         app:layout_constraintTop_toTopOf="@+id/btSaveEdit" />
 
-
+    <TextView
+        android:id="@+id/tvEditTitle"
+        style="@style/edit_title_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/edit"
+        app:layout_constraintEnd_toEndOf="@+id/ivAvatarEdit"
+        app:layout_constraintStart_toStartOf="@+id/ivAvatarEdit"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatarEdit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

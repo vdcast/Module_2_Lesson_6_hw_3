@@ -31,10 +31,12 @@ class DetailsFragment : Fragment() {
 
         btEditDetails.setOnClickListener {
 
+
+
             if (activity != null){
                 requireActivity().supportFragmentManager
                     .beginTransaction()
-                    .replace(R.id.flEdit, EditFragment.newInstance("dd","dd"))
+                    .replace(R.id.flEdit, EditFragment.newInstance(contact))
                     .addToBackStack(null)
                     .commit()
             }
