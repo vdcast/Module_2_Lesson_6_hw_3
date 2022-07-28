@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DetailsFragment">
+
+    <View
+        android:id="@+id/viewToSplitScreenEdit"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAvatarEdit"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/friends_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1Edit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatarEdit" />
+
+    <TextView
+        android:id="@+id/textView2Edit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/lastname"
+        app:layout_constraintStart_toStartOf="@+id/textView1Edit"
+        app:layout_constraintTop_toBottomOf="@+id/textView1Edit" />
+
+    <TextView
+        android:id="@+id/textView3Edit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/suffix"
+        app:layout_constraintStart_toStartOf="@+id/textView2Edit"
+        app:layout_constraintTop_toBottomOf="@+id/textView2Edit" />
+
+    <TextView
+        android:id="@+id/textView4Edit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/phone_number"
+        app:layout_constraintStart_toStartOf="@+id/textView3Edit"
+        app:layout_constraintTop_toBottomOf="@+id/textView3Edit" />
+
+    <TextView
+        android:id="@+id/textView5Edit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="@+id/textView4Edit"
+        app:layout_constraintTop_toBottomOf="@+id/textView4Edit" />
+
+    <!--    <EditText-->
+<!--        android:id="@+id/editTextTextPersonName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:text="Name"-->
+<!--        tools:layout_editor_absoluteX="95dp"-->
+<!--        tools:layout_editor_absoluteY="508dp" />-->
+
+    <View
+        android:id="@+id/viewToClickableEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/etNameEdit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView1Edit"
+        app:layout_constraintStart_toEndOf="@+id/textView1Edit"
+        app:layout_constraintTop_toTopOf="@+id/textView1Edit" />
+
+    <EditText
+        android:id="@+id/etLastNameEdit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2Edit"
+        app:layout_constraintStart_toStartOf="@+id/etNameEdit"
+        app:layout_constraintTop_toTopOf="@+id/textView2Edit" />
+
+    <EditText
+        android:id="@+id/etSuffixEdit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3Edit"
+        app:layout_constraintStart_toStartOf="@+id/etLastNameEdit"
+        app:layout_constraintTop_toTopOf="@+id/textView3Edit" />
+
+    <EditText
+        android:id="@+id/etPhoneNumberEdit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4Edit"
+        app:layout_constraintStart_toStartOf="@+id/etSuffixEdit"
+        app:layout_constraintTop_toTopOf="@+id/textView4Edit" />
+
+    <EditText
+        android:id="@+id/etEmailEdit"
+        style="@style/details_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5Edit"
+        app:layout_constraintStart_toStartOf="@+id/etPhoneNumberEdit"
+        app:layout_constraintTop_toTopOf="@+id/textView5Edit" />
+
+    <Button
+        android:id="@+id/btSaveEdit"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bt_bg"
+        android:text="@string/bt_save_edit"
+        app:layout_constraintEnd_toStartOf="@+id/viewToSplitScreenEdit"
+        app:layout_constraintTop_toBottomOf="@+id/textView5Edit" />
+
+    <Button
+        android:id="@+id/btDeleteEdit"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bt_bg"
+        android:text="@string/button_delete"
+        app:layout_constraintStart_toEndOf="@+id/viewToSplitScreenEdit"
+        app:layout_constraintTop_toTopOf="@+id/btSaveEdit" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

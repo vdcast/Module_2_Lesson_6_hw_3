@@ -1,5 +1,6 @@
 package com.example.module_2_lesson_6_hw_3
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,6 +28,19 @@ class DetailsFragment : Fragment() {
         tvPhoneNumber.text = contact?.phoneNumber
         tvEmail.text = contact?.email
         ivAvatar.setImageBitmap(contact?.avatar)
+
+        btEditDetails.setOnClickListener {
+
+            if (activity != null){
+                requireActivity().supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.flEdit, EditFragment.newInstance("dd","dd"))
+                    .addToBackStack(null)
+                    .commit()
+            }
+
+        }
+
     }
 
     companion object {
