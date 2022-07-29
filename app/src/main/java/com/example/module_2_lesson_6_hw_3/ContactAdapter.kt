@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_edit.view.*
 import kotlinx.android.synthetic.main.item_contact.view.*
 
 class ContactAdapter(val context: Context, val contacts: ArrayList<Contact>,
@@ -25,6 +26,9 @@ class ContactAdapter(val context: Context, val contacts: ArrayList<Contact>,
         holder.btEditItem.setOnClickListener {
             callback.onEditListSelected(contacts[position])
         }
+        holder.btDeleteItem.setOnClickListener {
+            callback.onDeleteItem(position, contacts)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -39,10 +43,12 @@ class ViewHolder (itemView: View) : RecyclerView.ViewHolder (itemView){
     val suffix = itemView.tvSuffixContact
     val email = itemView.tvEmailContact
     val root = itemView.clRootContactItem
-    val btEditItem = itemView.btEditContactsList
+    val btEditItem = itemView.btEditContactsItemList
+    val btDeleteItem = itemView.btDeleteContactsItemList
 }
 
 interface ContactsListCallback{
     fun onItemSelected(item: Contact)
     fun onEditListSelected(item: Contact)
+    fun onDeleteItem(index: Int, list: ArrayList<Contact>)
 }

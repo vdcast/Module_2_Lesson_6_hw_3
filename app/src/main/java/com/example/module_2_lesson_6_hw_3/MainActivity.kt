@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.time.Duration.Companion.seconds
 
 class MainActivity : AppCompatActivity(), ContactsListCallback{
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity(), ContactsListCallback{
 
         rvContactsList.adapter = ContactAdapter(this, getContacts(), this)
         rvContactsList.layoutManager = LinearLayoutManager(this)
+
+        
 
     }
 
@@ -46,5 +49,12 @@ class MainActivity : AppCompatActivity(), ContactsListCallback{
             .replace(R.id.flDetails,EditFragment.newInstance(item))
             .addToBackStack(null)
             .commit()
+
+    }
+
+    override fun onDeleteItem(index: Int, list: ArrayList<Contact>) {
+        list.removeAt(index)
+        rvContactsList.adapter?.notifyItemRemoved(index)
+        rvContactsList.adapter?.notifyDataSetChanged()
     }
 }

@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_details.*
 import kotlinx.android.synthetic.main.fragment_edit.*
 
 class EditFragment : Fragment() {
@@ -41,6 +40,21 @@ class EditFragment : Fragment() {
             contact?.phoneNumber = etPhoneNumberEdit.text.toString()
             contact?.email = etEmailEdit.text.toString()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             if (activity != null){
                 requireActivity().rvContactsList.adapter?.notifyDataSetChanged()
 
@@ -58,7 +72,7 @@ class EditFragment : Fragment() {
             }
         }
 
-        btDeleteEdit.setOnClickListener {
+        btBackEditFragment.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStackImmediate()
         }
     }

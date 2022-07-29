@@ -154,12 +154,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5Edit" />
 
     <Button
-        android:id="@+id/btDeleteEdit"
+        android:id="@+id/btBackEditFragment"
         android:layout_width="144dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:background="@drawable/bt_bg"
-        android:text="@string/button_delete"
+        android:text="@string/bt_back"
         app:layout_constraintStart_toEndOf="@+id/viewToSplitScreenEdit"
         app:layout_constraintTop_toTopOf="@+id/btSaveEdit" />
 

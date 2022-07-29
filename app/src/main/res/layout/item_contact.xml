@@ -61,8 +61,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNameContact" />
 
     <Button
-        android:id="@+id/btEditContactsList"
-        android:layout_width="56dp"
+        android:id="@+id/btEditContactsItemList"
+        android:layout_width="48dp"
         android:layout_height="32dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bt_bg"
@@ -71,4 +71,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/ivAvatarContact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ivAvatarContact" />
+
+    <Button
+        android:id="@+id/btDeleteContactsItemList"
+        android:layout_width="48dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bt_bg"
+        android:text="@string/bt_delete"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btEditContactsItemList"
+        app:layout_constraintEnd_toStartOf="@+id/btEditContactsItemList"
+        app:layout_constraintTop_toTopOf="@+id/btEditContactsItemList" />
 </androidx.constraintlayout.widget.ConstraintLayout>
