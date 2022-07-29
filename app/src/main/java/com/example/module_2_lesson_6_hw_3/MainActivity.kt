@@ -35,7 +35,15 @@ class MainActivity : AppCompatActivity(), ContactsListCallback{
     override fun onItemSelected(item: Contact) {
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.flDetails,DetailsFragment.newInstance(item))
+            .add(R.id.flDetails,DetailsFragment.newInstance(item))
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun onEditListSelected(item: Contact) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.flDetails,EditFragment.newInstance(item))
             .addToBackStack(null)
             .commit()
     }

@@ -42,16 +42,18 @@ class EditFragment : Fragment() {
             contact?.email = etEmailEdit.text.toString()
 
             if (activity != null){
-                requireActivity().tvName.text = etNameEdit.text.toString()
-                requireActivity().tvLastName.text = etLastNameEdit.text.toString()
-                requireActivity().tvSuffix.text = etSuffixEdit.text.toString()
-                requireActivity().tvPhoneNumber.text = etPhoneNumberEdit.text.toString()
-                requireActivity().tvEmail.text = etEmailEdit.text.toString()
-
                 requireActivity().rvContactsList.adapter?.notifyDataSetChanged()
-                requireActivity().supportFragmentManager.popBackStackImmediate()
+//                requireActivity().supportFragmentManager.popBackStackImmediate()
+                requireActivity().supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.flDetails,DetailsFragment.newInstance(contact))
+                    .addToBackStack(null)
+                    .commit()
             }
+        }
 
+        btDeleteEdit.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStackImmediate()
         }
     }
 

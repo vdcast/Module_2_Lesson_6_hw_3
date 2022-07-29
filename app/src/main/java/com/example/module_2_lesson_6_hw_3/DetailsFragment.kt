@@ -33,17 +33,20 @@ class DetailsFragment : Fragment() {
             if (activity != null){
                 requireActivity().supportFragmentManager
                     .beginTransaction()
-                    .replace(R.id.flEdit, EditFragment.newInstance(contact))
+                    .replace(R.id.flDetails, EditFragment.newInstance(contact))
                     .addToBackStack(null)
                     .commit()
             }
+        }
+        btDeleteDetails.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStackImmediate()
         }
 
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(contact: Contact) =
+        fun newInstance(contact: Contact?) =
             DetailsFragment().apply {
                 this.contact = contact
             }

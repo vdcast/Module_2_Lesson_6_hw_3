@@ -22,6 +22,9 @@ class ContactAdapter(val context: Context, val contacts: ArrayList<Contact>,
         holder.root.setOnClickListener {
             callback.onItemSelected(contacts[position])
         }
+        holder.btEditItem.setOnClickListener {
+            callback.onEditListSelected(contacts[position])
+        }
     }
 
     override fun getItemCount(): Int {
@@ -36,8 +39,10 @@ class ViewHolder (itemView: View) : RecyclerView.ViewHolder (itemView){
     val suffix = itemView.tvSuffixContact
     val email = itemView.tvEmailContact
     val root = itemView.clRootContactItem
+    val btEditItem = itemView.btEditContactsList
 }
 
 interface ContactsListCallback{
     fun onItemSelected(item: Contact)
+    fun onEditListSelected(item: Contact)
 }
