@@ -43,12 +43,18 @@ class EditFragment : Fragment() {
 
             if (activity != null){
                 requireActivity().rvContactsList.adapter?.notifyDataSetChanged()
+
+                // go back to previous with updated info
+                requireActivity().onBackPressed()
+
+                // run fragment with updated info
+//                requireActivity().supportFragmentManager
+//                    .beginTransaction()
+//                    .replace(R.id.flDetails,DetailsFragment.newInstance(contact))
+//                    .addToBackStack(null)
+//                    .commit()
+
 //                requireActivity().supportFragmentManager.popBackStackImmediate()
-                requireActivity().supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.flDetails,DetailsFragment.newInstance(contact))
-                    .addToBackStack(null)
-                    .commit()
             }
         }
 
