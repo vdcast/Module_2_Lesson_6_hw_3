@@ -3,7 +3,7 @@
 
 Fragments.
 
-**Technical task:**
+**Task:**
 
 Create an application "Contacts manager".
 1) Main screen - scrollable list of contacts. For each contact, there is an avatar, first name, last name, suffix (in one line), email (small), an edit button. Bottom right FloatingActionButton to add a contact.
