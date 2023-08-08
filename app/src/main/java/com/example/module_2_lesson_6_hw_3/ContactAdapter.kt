@@ -13,7 +13,6 @@ class ContactAdapter(val context: Context, val contacts: ArrayList<Contact>,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_contact,parent,false))
     }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.avatar.setImageBitmap(contacts[position].avatar)
         holder.name.text = contacts[position].name

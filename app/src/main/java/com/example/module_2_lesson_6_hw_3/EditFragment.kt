@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.fragment_edit.*
 class EditFragment : Fragment() {
 
     private var contact: Contact? = null
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

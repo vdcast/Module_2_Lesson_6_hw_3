@@ -15,8 +15,6 @@ class MainActivity : AppCompatActivity(), ContactsListCallback{
         rvContactsList.adapter = ContactAdapter(this, getContacts(), this)
         rvContactsList.layoutManager = LinearLayoutManager(this)
 
-        
-
     }
 
     fun getContacts(): ArrayList<Contact>{
