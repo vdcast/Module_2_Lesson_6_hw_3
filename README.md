@@ -12,4 +12,4 @@ Create an application "Contacts manager".
 
 **Result: Screen recoding** (please, note that it was converted to GIF, so it's not smooth as it was):
 
-![Module_2_Lesson_6_hw_3](https://github.com/vdcast/Module_2_Lesson_6_hw_3/assets/108469609/84d688cf-4d08-4ec9-a9e5-2eaed7856673)
+![Module_2_Lesson_6_hw_3](https://github.com/vdcast/Module_2_Lesson_6_hw_3/assets/108469609/9cdc8cbe-d40b-4c01-a6e1-441cba67f020)
